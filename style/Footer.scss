@@ -1,0 +1,96 @@
+  @import "./variables.scss";
+  .footer {
+           width: 100%;
+           height: 100%;
+           background-color: #CFCFE6;
+           @include d-flex-culumn;
+           justify-items: center;
+           h2 {
+               margin-top: 2%;
+               text-align: center;
+           }
+           form {
+               margin: 0 auto;
+               width: 50%;
+               @include d-flex-culumn;
+               justify-items: center;
+               input,
+               select {
+                   color: #757575;
+                   border: unset;
+                   background: unset;
+                   margin: 1%;
+                   height: 100%;
+                   padding: 1.5%;
+                   border-bottom: solid 2px rgba(0, 0, 0, 0.596);
+                   &:focus {
+                       border: unset;
+                   }
+               }
+               button {
+                   background-color: #595963;
+                   color: white;
+                   transition: 0.3s;
+                   border: solid 2px white;
+                   &:hover {
+                       color: $couleurJaune;
+                       border: solid 2px $couleurJaune;
+                   }
+               }
+           }
+           .contact__addresse {
+               margin-top: 4%;
+               height: 10%;
+               width: 100%;
+               @include d-flex-row;
+               justify-content: center;
+               align-items: center;
+               address,
+               a {
+                   display: flex;
+                   width: auto;
+                   img {
+                       width: 20%;
+                       height: 20%;
+                       display: inline;
+                       margin-right: 2%;
+                   }
+                   color: black;
+               }
+               a {
+                   text-decoration: none;
+                   color: black;
+                   font-size: 1.2em;
+                   font-weight: bolder;
+                   margin-bottom: 1.2%;
+                   margin-left: 2%;
+               }
+           }
+           .footer {
+               background-color: #595963;
+               div {
+                   margin-top: 4%;
+                   @include d-flex-row;
+                   justify-content: center;
+                   align-self: center;
+                   width: 45%;
+                   p {
+                       @include paragraphe;
+                       color: rgb(255, 255, 255);
+                   }
+                   div {
+                       margin-bottom: 5%;
+                       img {
+                           font-size: 0.6em;
+                           height: 10%;
+                           width: 10%;
+                           margin-left: 2%;
+                       }
+                   }
+               }
+               p {
+                   @include paragraphe;
+                   align-self: center;
+               }
+           }
+       }

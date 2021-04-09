@@ -1,0 +1,126 @@
+  
+   @import "./variables.scss";
+  .competences {
+           width: 100%;
+           height: auto;
+           overflow-x: hidden;
+           .compences__hardskills {
+               display: flex;
+               flex-wrap: wrap-reverse;
+               div.hardskills__image {
+                   img:nth-child(1) {
+                       width: 100%;
+                       height: 100%;
+                       display: block;
+                   }
+               }
+               div.hardskills__commentaire {
+                   background-color: #CFCFE6;
+                   @include d-flex-culumn;
+                   justify-items: center;
+                   align-content: center;
+                   h3 {
+                       @include titre;
+                       margin-top: 5%;
+                   }
+                   p {
+                       @include paragraphe;
+                       margin-top: 2%;
+                       justify-self: center;
+                       align-self: center;
+                       width: 50%;
+                       display: inline-block;
+                   }
+                   button {
+                       align-self: center;
+                       border: solid black;
+                       color: black;
+                       font-size: 1.4em;
+                       width: 30%;
+                       &:hover {
+                           border: solid 2.5px white;
+                           color: white;
+                           background-color: $couleurJaune;
+                       }
+                   }
+                   .groupe--logo {
+                       margin: auto;
+                       display: flex;
+                       img {
+                           margin: 2%;
+                           background: #fff;
+                           border-radius: 50px;
+                           border: solid 1px rgba(0, 0, 0, 0.158);
+                           width: 60%;
+                           height: 50%;
+                       }
+                   }
+               }
+           }
+           .competences__softskills {
+               .softskills__commentaire {
+                   @include d-flex-culumn;
+                   padding-bottom: 5%;
+                   margin-bottom: 1%;
+                   background-color: $couleurJaune;
+                   align-content: center;
+                   h3 {
+                       @include titre;
+                       margin-top: 5%;
+                       color: black;
+                   }
+                   p {
+                       @include paragraphe;
+                       margin-top: 2%;
+                       justify-self: center;
+                       align-self: center;
+                       width: 50%;
+                       margin-top: 0 auto;
+                       color: black;
+                   }
+                   button {
+                       align-self: center;
+                       width: 30%;
+                       border: solid white;
+                       color: white;
+                       font-size: 1.4em;
+                   }
+               }
+               span {
+                   margin-left: 10%;
+                   margin-right: 3%;
+                   margin-bottom: 0;
+                   color: black;
+               }
+               .capacite {
+                   color: black;
+                   line-height: 5px;
+                   margin: 0% auto 2% auto;
+                   width: 80%;
+                   height: 10%;
+                   background-color: #313532;
+                   .capacite__item:nth-child(1) {
+                       color: $couleurJaune;
+                       height: 100%;
+                       width: 90%;
+                       background-color: #86868b;
+                   }
+                   &:nth-child(2),
+                   &:nth-child(3),
+                   &:nth-child(4) {
+                       .capacite__item:nth-child(1) {
+                           height: 100%;
+                           width: 98%;
+                           color: $couleurJaune;
+                           background-color: #86868b;
+                       }
+                   }
+               }
+               .softskills__image {
+                   img {
+                       width: 100%;
+                       height: 97.3%;
+                   }
+               }
+           }
+       }

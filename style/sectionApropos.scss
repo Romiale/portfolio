@@ -1,0 +1,75 @@
+ @import "./variables.scss";
+ .acceuil {
+           overflow-y: hidden;
+           height: auto;
+           width: 100vw;
+           height: auto;
+           padding-bottom: 3%;
+           margin-top: 5vh;
+           @media (max-width: 750px) {
+               margin-top: -17%;
+           }
+           background: #CFCFE6;
+           .acceuil__container {
+               h1 {
+                   @include titre;
+                   color: white;
+                   bottom: 3%;
+                   align-self: baseline;
+                   margin-right: 3%;
+               }
+               .acceuil__description {
+                   box-sizing: content-box;
+                   background-color: rgba(0, 0, 0, 0.568);
+                   margin-top: 5%;
+                   width: 60%;
+                   height: auto;
+                   padding: 5%;
+                   display: flex;
+                   @media (max-width: 760px) {
+                       width: 100%;
+                       padding-bottom: 20%;
+                       @include d-flex-culumn;
+                   }
+                   p {
+                       border-left: 2px solid $couleurJaune;
+                       color: white;
+                       @include paragraphe;
+                       width: 100%;
+                       padding: 2%;
+                   }
+               }
+           }
+           .description__techno {
+               display: flex;
+               display: inline;
+               justify-content: space-between;
+               align-self: center;
+               width: 50%;
+               margin-left: 37%;
+               @media (max-width: 411px) {
+                   margin-bottom: 50%;
+                   margin-left: 20%;
+               }
+               div {
+                   display: inline;
+                   box-sizing: content-box;
+                   padding: 1% 0.5%;
+                   border-radius: 25px;
+                   border: solid 2.5px $couleurJaune;
+                   background-color: white;
+                   box-shadow: 2px 2px 2px $couleurGris;
+                   transition: 0.3s;
+                   margin: 1%;
+                   align-self: center;
+                   &:hover {
+                       background-color: $couleurJaune;
+                       border: solid 2px white;
+                   }
+                   img {
+                       width: 30px;
+                       height: 30px;
+                   }
+               }
+           }
+       }

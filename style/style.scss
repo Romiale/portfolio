@@ -1,0 +1,97 @@
+      //les mixins
+      @mixin d-flex-row {
+           display: flex;
+           flex-direction: row;
+       }
+       
+       @mixin d-flex-culumn {
+           display: flex;
+           flex-direction: column;
+       }
+       
+       @mixin titre {
+           font-size: 2.5em;
+           font-weight: bolder;
+           text-align: center;
+       }
+       
+       @mixin paragraphe {
+           font-size: 1.1em;
+           text-align: justify;
+       }
+       // fin mixins
+       @import "variables.scss";
+       @import "sectionApropos.scss";
+       @import "sectionProjets.scss";
+       @import "sectionCompetences.scss";
+       @import "Footer.scss";
+       // styles des sections
+       body {
+           top: 100vh;
+           margin: 0;
+           overflow-x: hidden;
+           scroll-margin-bottom: unset;
+       }
+       
+    
+       .bttn {
+           padding: 0.4% 2%;
+           background: none;
+           display: inline;
+           font-size: 1.4em;
+           border: 2px solid black;
+       }
+       
+       .bttn--gris {
+           align-self: center;
+           border: solid rgb(255, 255, 255);
+           color: rgb(255, 255, 255);
+           font-size: 1.4em;
+           width: 30%;
+           &:hover {
+               background-color: $couleurGris;
+               color: rgb(190, 183, 183);
+               border: solid 2px rgb(150, 150, 150);
+           }
+       }
+       
+       .bttn--blanc {
+           border: solid 2px white;
+           color: white;
+           &:hover {
+               background-color: white;
+               color: rgb(0, 0, 0);
+               border: solid 2px rgb(0, 0, 0);
+               box-shadow: 2px 2px 2px whitesmoke;
+           }
+       }
+       
+       .bttn-jaune {
+           &:hover {
+               background-color: $couleurJaune;
+               border: solid 2px rgb(199, 197, 197);
+               color: white;
+           }
+       }
+       
+       nav {
+           div {
+               ul {
+                   li {
+                       font-size: 1.3em;
+                       border-radius: 5px;
+                       &:hover {
+                           background-color: $couleurJaune;
+                       }
+                   }
+               }
+           }
+       }
+       
+      
+       
+       
+       
+     
+       
+     

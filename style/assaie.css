@@ -1,0 +1,68 @@
+.apropos--presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 5px;
+}
+
+@media (max-width:760px) {
+    .apropos--presentation {
+        top: 0;
+    }
+}
+
+.apropos--presentation li:nth-child(1) {
+    color: black;
+    font-size: 1.5em;
+}
+
+.apropos--presentation .presentation--profile,
+.apropos--presentation1 .presentation--profile {
+    margin-top: 20%;
+    padding: 4% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.apropos--presentation .presentation--profile .profile--img,
+.apropos--presentation1 .presentation--profile .profile--img {
+    width: 50%;
+    border-radius: 85px;
+    margin-top: 5%;
+    border: solid 2px rgba(157, 170, 176, 0.3);
+    background: white;
+    margin-left: -6%;
+}
+
+.apropos--presentation .presentation--profile .profile--description,
+.apropos--presentation1 .presentation--profile .profile--description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    font-weight: 200;
+    width: auto;
+    height: 50%;
+    list-style: none;
+    margin-right: 10%;
+}
+
+.apropos--presentation .presentation--profile .profile--description .profile--techno,
+.apropos--presentation1 .presentation--profile .profile--description .profile--techno {
+    border-bottom: 1px solid rgb(195, 188, 188);
+    margin: 5% auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    padding: 1%;
+    background-color: rgb(220, 220, 221);
+    box-sizing: border-box;
+}
