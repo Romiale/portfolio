@@ -58,10 +58,10 @@
                }
            }
            .competences__softskills {
+
                .softskills__commentaire {
                    @include d-flex-culumn;
                    padding-bottom: 5%;
-                   margin-bottom: 1%;
                    background-color: $couleurJaune;
                    align-content: center;
                    h3 {
@@ -119,7 +119,7 @@
                .softskills__image {
                    img {
                        width: 100%;
-                       height: 97.3%;
+                       height: 100%;
                    }
                }
            }

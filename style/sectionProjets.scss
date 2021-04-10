@@ -91,12 +91,12 @@
                        }
                        a {
                            img {
-                               border: solid 1px rgba(255, 255, 255, 0.418);
                                width: 90%;
                                height: 88%;
                                align-self: center;
                                transition: 0.4s;
-                               border: solid 1px white;
+                               border-radius: 5px;
+                               border: solid 1px rgb(221, 221, 221);
                                align-self: center;
                                margin-left: 5%;
                                margin-top: 3%;

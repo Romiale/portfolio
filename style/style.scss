@@ -19,6 +19,14 @@
            font-size: 1.1em;
            text-align: justify;
        }
+       @mixin inputCustom {
+              color: #757575;
+                   border: unset;
+                   background: unset;
+                   margin: 1%;
+                   padding: 1.5%;
+                   border-bottom: solid 2px rgba(0, 0, 0, 0.596);
+       }
        // fin mixins
        @import "variables.scss";
        @import "sectionApropos.scss";

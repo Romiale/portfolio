@@ -177,12 +177,12 @@
 }
 .projet .projet__illustration .illustration--block1 .illustration__item a img,
 .projet .projet__illustration .illustration--block2 .illustration__item a img {
-  border: solid 1px rgba(255, 255, 255, 0.418);
   width: 90%;
   height: 88%;
   align-self: center;
   transition: 0.4s;
-  border: solid 1px white;
+  border-radius: 5px;
+  border: solid 1px #dddddd;
   align-self: center;
   margin-left: 5%;
   margin-top: 3%;
@@ -270,7 +270,6 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 5%;
-  margin-bottom: 1%;
   background-color: #EDC029;
   align-content: center;
 }
@@ -326,10 +325,11 @@
 }
 .competences .competences__softskills .softskills__image img {
   width: 100%;
-  height: 97.3%;
+  height: 100%;
 }
 
 .footer {
+  padding-top: 7%;
   width: 100%;
   height: 100%;
   background-color: #CFCFE6;
@@ -338,8 +338,8 @@
   justify-items: center;
 }
 .footer h2 {
-  margin-top: 2%;
   text-align: center;
+  margin-bottom: 2%;
 }
 .footer form {
   margin: 0 auto;
@@ -354,13 +354,22 @@
   border: unset;
   background: unset;
   margin: 1%;
-  height: 100%;
   padding: 1.5%;
   border-bottom: solid 2px rgba(0, 0, 0, 0.596);
+  height: 100%;
 }
 .footer form input:focus,
 .footer form select:focus {
   border: unset;
+  background: unset;
+}
+.footer form textarea {
+  color: #757575;
+  border: unset;
+  background: unset;
+  margin: 1%;
+  padding: 1.5%;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.596);
 }
 .footer form button {
   background-color: #595963;

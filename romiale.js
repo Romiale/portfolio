@@ -1,7 +1,7 @@
 //  * Animation au chargement
 //  */
 
-(function() {
+(function () {
     window.addEventListener('load', () => {
         AOS.init({
             duration: 1500,
@@ -37,13 +37,13 @@
 
 // json profile
 
-window.addEventListener("load", function() {
-    fetch("http://localhost:3000/profile")
-        .then(function(response) {
+window.addEventListener("load", function () {
+    fetch("https://6071a85250aaea0017284e71.mockapi.io/donnees/profile")
+        .then(function (response) {
             return response.json();
         })
-        .then(function(data) {
-            console.log(data);
+        .then(function (data) {
+            document.getElementById("imgProfile").src = data[0].imgProfile;
             let prenomNom = document.createElement("li");
             prenomNom.innerText = data[0].prenom + ' ' + data[0].nom;
             let profession = document.createElement("li");
@@ -54,6 +54,53 @@ window.addEventListener("load", function() {
             let profile = document.querySelector(".profile--description");
             profile.prepend(prenomNom, profession, description);
 
+            // icones des reseaux 
+            document.querySelector(".profile--techno > a:nth-child(1)").href = data[0].lienReseaux.facebook.lien;
+            document.querySelector(".profile--techno > a:nth-child(1)>img").src = data[0].lienReseaux.facebook.adresseImage;
+
+            document.querySelector(".profile--techno > a:nth-child(2)").href = data[0].lienReseaux.twitter.lien;
+            document.querySelector(".profile--techno > a:nth-child(2)>img").src = data[0].lienReseaux.twitter.adresseImage;
+
+            document.querySelector(".profile--techno > a:nth-child(3)").href = data[0].lienReseaux.gmail.lien;
+            document.querySelector(".profile--techno > a:nth-child(3)>img").src = data[0].lienReseaux.gmail.adresseImage;
+            //chargement des projets
+
+
 
         });
 });
+
+
+// ajout d'un message dans le json appartir du formulaire
+
+var formSubmit = document.getElementById('form').addEventListener('submit', function (e) {
+    e.preventDefault()
+    const message = {
+        nom: document.getElementById('nom').value,
+        categorie: document.getElementById('categorie').value,
+        pays: document.getElementById('pays').value,
+        descriptMessage: document.getElementById('descriptMessage').value,
+        email: document.getElementById('email').value
+    }
+    fetch("https://6071a85250aaea0017284e71.mockapi.io/donnees/message",
+        {
+            method: "POST",
+            body: JSON.stringify(message),
+            headers: {
+                "Content-Type": "application/json",
+            }
+        }
+    )
+    // vider les champs de saisi apres exécution
+
+    function refresh() {
+
+        document.querySelector("#nom").value = "";
+        document.querySelector("#categorie").value = "";
+        document.querySelector("#pays").value = "";
+        document.querySelector("#email").value = "";
+        document.querySelector("#descriptMessage").value = "";
+    }
+    refresh();
+
+})
